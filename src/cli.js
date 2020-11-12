@@ -5,4 +5,4 @@ const askNameUser = async () => {
     console.log(`Hello, ${nameUser}!`);    
 }
 
-export default askNameUser;
+export default askameUser;
