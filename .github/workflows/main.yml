@@ -2,7 +2,7 @@
 # This is a basic workflow to help you get started with Actions
 #--------------------------------------------------------------
 
-name: front-project-lv1-basics
+name: EslintStatus
 
 
 on: [push]
