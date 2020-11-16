@@ -17,4 +17,4 @@ rules:
   no-underscore-dangle: [2, {"allow": ["__filename", "__dirname"]}]
  
 settings:
-  import/resolver: readlineSync
+  import/resolver: 'readline-sync'
