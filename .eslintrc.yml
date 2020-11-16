@@ -12,6 +12,7 @@ parserOptions:
   sourceType: module
 
 rules: 
+  import/no-unresolved: [2, {commonjs: true, amd: true}]
   no-console: 0
   import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
   no-underscore-dangle: [2, {"allow": ["__filename", "__dirname"]}]
