@@ -15,6 +15,9 @@ jobs:
   steps:
   - name: git clone my repository
     uses: actions/checkout@v1
-
+    
+  - name: install packages
+    run: make install
+    
   - name: linting(ESLINT)
     run: make lint
