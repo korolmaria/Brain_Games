@@ -5,7 +5,7 @@ brain-games:
 publish:
 	npm publish --dry-run
 lint:
-	npx eslint .
+	sudo npx eslint .
 lintfix:
 	npx eslint --fix .
 brain-even:
