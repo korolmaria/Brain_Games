@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import askEvenNumber from '../src/evenNum.js';
+import getResult from '../src/index.js';
 
-console.log('Welcome to the Brain Games!');
-
-askEvenNumber();
+const nameGame = 'brainEven';
+getResult(nameGame);
