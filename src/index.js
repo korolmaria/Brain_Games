@@ -85,8 +85,8 @@ const getResult = (itemName) => {
       console.log('Correct!');
       countRightAnswer += 1;
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}". 
-      Let's try again, ${nameUser}!`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`); 
+      console.log(`Let's try again, ${nameUser}!`);
     }
   }
   if (countRightAnswer === COUNTROUNDS) {
