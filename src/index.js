@@ -2,11 +2,13 @@ import readlineSync from 'readline-sync';
 import { questionEven, isEvenNumber } from '../games/evenNum.js';
 import { questionCalc, getString, resultCalculate } from '../games/calcNum.js';
 import { getGcdNum, questionGcd } from '../games/gcdNum.js';
-
 import {
   randomInteger, MIN, MAX, getArray,
 } from './cli.js';
-import { questionProgression, getStringProgression, getProgressionAnswer } from '../games/progressionNum.js';
+import {
+  questionProgression, getStringProgression, getProgressionAnswer,
+} from '../games/progressionNum.js';
+import { questionPrime, isPrimeNum } from '../games/primeNum.js';
 
 export const COUNTROUNDS = 3;
 
@@ -24,6 +26,9 @@ const getQuestion = (nameGame) => {
       break;
     case 'brainProgression':
       question += questionProgression;
+      break;
+    case 'brainPrime':
+      question += questionPrime;
       break;
     default:
       break;
@@ -65,6 +70,12 @@ const getResult = (itemName) => {
         rightAnswer += getProgressionAnswer(arrProgression, randIndexProgression);
         mathExpression += getStringProgression(arrProgression, randIndexProgression);
         break;
+      case 'brainPrime':
+        arrProgression = getArray(5, 10);
+        randIndexProgression += randomInteger(MIN, arrProgression.length - 1);
+        rightAnswer += isPrimeNum(randNum1);
+        mathExpression += randNum1;
+        break;
       default:
         break;
     }
@@ -74,7 +85,7 @@ const getResult = (itemName) => {
       console.log('Correct!');
       countRightAnswer += 1;
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'. 
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}". 
       Let's try again, ${nameUser}!`);
     }
   }
