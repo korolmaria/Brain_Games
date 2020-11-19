@@ -39,7 +39,7 @@ const getQuestion = (nameGame) => {
 const getResult = (itemName) => {
   console.log('Welcome to the Brain Games!');
   const nameUser = readlineSync.question('May I have your name? ');
-  console.log(`Hello! ${nameUser}`);
+  console.log(`Hello, ${nameUser}`);
   console.log(getQuestion(itemName));
   let countRightAnswer = 0;
   for (let i = 0; i < COUNTROUNDS; i += 1) {
@@ -85,7 +85,7 @@ const getResult = (itemName) => {
       console.log('Correct!');
       countRightAnswer += 1;
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`); 
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
       console.log(`Let's try again, ${nameUser}!`);
     }
   }
