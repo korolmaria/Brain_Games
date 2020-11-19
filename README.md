@@ -5,9 +5,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/korolmaria/frontend-project-lvl1/maintainability) ![Status ESLINT linting](https://github.com/korolmaria/frontend-project-lvl1/workflows/EslintStatus/badge.svg)
 
 ### Asciinema terminal session:
-#: Brain-even game
+# Brain-even game
 [![asciicast](https://asciinema.org/a/kHmZ02YrSpDsiRh2SWeJkjhuD.svg)](https://asciinema.org/a/kHmZ02YrSpDsiRh2SWeJkjhuD)
-#: Brain-calc game
+# Brain-calc game
 [![asciicast](https://asciinema.org/a/FDpFVvO26BVALYnnXorLeeS77.svg)](https://asciinema.org/a/FDpFVvO26BVALYnnXorLeeS77)
-#: Brain-gcd game
+# Brain-gcd game
 [![asciicast](https://asciinema.org/a/c7CjB8bNqaqZkP71P6A4cybVM.svg)](https://asciinema.org/a/c7CjB8bNqaqZkP71P6A4cybVM)
