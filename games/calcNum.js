@@ -1,7 +1,7 @@
 /* eslint-disable default-case */
 export const questionCalc = 'What is the result of the expression?';
 
-export const getString = (num1, num2, sign) => {
+export const getString = (num1, num2, sign = '') => {
   const stringForCalc = `${num1} ${sign} ${num2}`;
   return stringForCalc;
 };

@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { questionEven, isEvenNumber } from '../games/evenNum.js';
-// eslint-disable-next-line import/no-unresolved
-import { questionCalc, getString, resultCalculate } from '../games/CalcNum.js';
+import { questionCalc, getString, resultCalculate } from '../games/calcNum.js';
+import { questionGcd, getGcdNum } from '../games/gcdNum.js';
 
 import { randomInteger, MIN, MAX } from './cli.js';
 
@@ -19,6 +19,9 @@ const getResult = (itemName) => {
       break;
     case 'brainCalc':
       question += questionCalc;
+      break;
+    case 'brainGcd':
+      question += questionGcd;
       break;
   }
   console.log(`${question}`);
@@ -39,6 +42,10 @@ const getResult = (itemName) => {
       case 'brainCalc':
         rightAnswer += resultCalculate(randNum1, randNum2, signs[randomIndex]);
         mathExpression += getString(randNum1, randNum2, signs[randomIndex]);
+        break;
+      case 'brainGcd':
+        rightAnswer += getGcdNum(randNum1, randNum2);
+        mathExpression += getString(randNum1, randNum2);
         break;
     }
     console.log(`Question: ${mathExpression}`);
