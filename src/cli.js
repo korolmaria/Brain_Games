@@ -15,7 +15,7 @@ export const randomInteger = (num1, num2) => {
   return Math.floor(rand);
 };
 
-export const getArray = (minLength = 1, maxLength = 1) => {
+export const getArray = (minLength, maxLength) => {
   const lengthArray = randomInteger(minLength, maxLength);
   const progresNumSum = randomInteger(MIN, MAX);
   const numStart = randomInteger(MIN, MAX);
