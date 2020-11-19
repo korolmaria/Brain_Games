@@ -1,4 +1,3 @@
-/* eslint-disable default-case */
 export const questionCalc = 'What is the result of the expression?';
 
 export const getString = (num1, num2, sign = '') => {
@@ -17,6 +16,8 @@ export function resultCalculate(num1, num2, sign) {
       break;
     case '*':
       resultCalc = num1 * num2;
+      break;
+    default:
       break;
   }
   return resultCalc;
