@@ -8,11 +8,7 @@
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
     "brain-progression": "bin/brain-progression.js",
-<<<<<<< HEAD
     "brain-prime": "bin/brain-prime.js"
-=======
-    "brain-prime": "bin/brain-prime.js."
->>>>>>> a4f08f16b9af98cba927c366056323776b592e68
   },
   "main": "index.js",
   "type": "module",
