@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { questionEven, isEvenNumber } from '../games/evenNum.js';
 import { questionCalc, getString, resultCalculate } from '../games/calcNum.js';
-import { getGcdNum, questionGcd } from '../games/gcdNum.js';
+import { getGcdNum, getGcdString, questionGcd } from '../games/gcdNum.js';
 import {
   randomInteger, MIN, MAX, getArray,
 } from './cli.js';
@@ -62,7 +62,7 @@ const getResult = (itemName) => {
         break;
       case 'brainGcd':
         rightAnswer += getGcdNum(randNum1, randNum2);
-        mathExpression += getString(randNum1, randNum2);
+        mathExpression += getGcdString(randNum1, randNum2);
         break;
       case 'brainProgression':
         arrProgression = getArray(5, 10);

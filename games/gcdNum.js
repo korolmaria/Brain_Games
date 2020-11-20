@@ -1,5 +1,10 @@
 export const questionGcd = 'Find the greatest common divisor of given numbers.';
 
+export const getGcdString = (num1, num2) => {
+  const strGcd = `${num1} ${num2}`;
+  return strGcd;
+};
+
 export const getGcdNum = (num1, num2) => {
   const arrayNum = [];
   const numEnd = num2 > num1 ? num2 : num1;
