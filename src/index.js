@@ -82,8 +82,7 @@ const getResult = (itemName) => {
     console.log(`Question: ${mathExpression}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === '') {
-      // eslint-disable-next-line no-continue
-      continue;
+      return;
     }
     if (answer === rightAnswer) {
       console.log('Correct!');
