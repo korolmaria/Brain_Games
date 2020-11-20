@@ -91,6 +91,6 @@ const getResult = (itemName) => {
   if (countRightAnswer === COUNTROUNDS) {
     console.log(`Congratulations, ${nameUser}!`);
   }
-  getResult(itemName);
 };
+
 export default getResult;
