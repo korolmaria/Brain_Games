@@ -71,8 +71,6 @@ const getResult = (itemName) => {
         mathExpression += getStringProgression(arrProgression, randIndexProgression);
         break;
       case 'brainPrime':
-        arrProgression = getArray(5, 10);
-        randIndexProgression += randomInteger(MIN, arrProgression.length - 1);
         rightAnswer += isPrimeNum(randNum1);
         mathExpression += randNum1;
         break;
