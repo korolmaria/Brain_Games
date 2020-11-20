@@ -47,7 +47,6 @@ const getResult = (itemName) => {
     let mathExpression = '';
     const randNum1 = randomInteger(MIN, MAX);
     const randNum2 = randomInteger(MIN, MAX);
-    const signs = ['+', '-', '*'];
     const randomIndex = randomInteger(MIN, COUNTROUNDS - 1);
     let arrProgression = [];
     let randIndexProgression = 0;
@@ -57,8 +56,8 @@ const getResult = (itemName) => {
         mathExpression += randNum1;
         break;
       case 'brainCalc':
-        rightAnswer += resultCalculate(randNum1, randNum2, signs[randomIndex]);
-        mathExpression += getString(randNum1, randNum2, signs[randomIndex]);
+        rightAnswer += resultCalculate(randNum1, randNum2, randomIndex);
+        mathExpression += getString(randNum1, randNum2, randomIndex);
         break;
       case 'brainGcd':
         rightAnswer += getGcdNum(randNum1, randNum2);

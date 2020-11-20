@@ -1,11 +1,14 @@
 export const questionCalc = 'What is the result of the expression?';
 
-export const getString = (num1, num2, sign = '') => {
+const signs = ['+', '-', '*'];
+export const getString = (num1, num2, randomInd) => {
+  const sign = signs[randomInd];
   const stringForCalc = `${num1} ${sign} ${num2}`;
   return stringForCalc;
 };
 
-export function resultCalculate(num1, num2, sign) {
+export function resultCalculate(num1, num2, randomInd) {
+  const sign = signs[randomInd];
   let resultCalc = 0;
   switch (sign) {
     case '+':
