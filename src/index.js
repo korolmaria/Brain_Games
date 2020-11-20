@@ -87,11 +87,11 @@ const getResult = (itemName) => {
     } else {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
       console.log(`Let's try again, ${nameUser}!`);
+      break;
     }
   }
   if (countRightAnswer === COUNTROUNDS) {
     console.log(`Congratulations, ${nameUser}!`);
   }
-  return true;
 };
 export default getResult;
