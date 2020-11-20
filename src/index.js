@@ -81,9 +81,6 @@ const getResult = (itemName) => {
     }
     console.log(`Question: ${mathExpression}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer === '') {
-      return;
-    }
     if (answer === rightAnswer) {
       console.log('Correct!');
       countRightAnswer += 1;
@@ -95,5 +92,6 @@ const getResult = (itemName) => {
   if (countRightAnswer === COUNTROUNDS) {
     console.log(`Congratulations, ${nameUser}!`);
   }
+  return 0;
 };
 export default getResult;
