@@ -1,16 +1,14 @@
 import readlineSync from 'readline-sync';
 import { questionEven, isEvenNumber } from '../games/evenNum.js';
-import { questionCalc, getString, resultCalculate } from '../games/calcNum.js';
+import { questionPrime, isPrimeNum } from '../games/primeNum.js';
+import { questionCalc, getCalcString, resultCalculate } from '../games/calcNum.js';
 import { getGcdNum, getGcdString, questionGcd } from '../games/gcdNum.js';
 import {
-  randomInteger, MIN, MAX, getArray,
+  randomInteger, MIN, MAX, COUNTROUNDS,
 } from './cli.js';
 import {
-  questionProgression, getStringProgression, getProgressionAnswer,
+  questionProgression, getStringProgression, getProgressionAnswer, getArrayProgressive,
 } from '../games/progressionNum.js';
-import { questionPrime, isPrimeNum } from '../games/primeNum.js';
-
-export const COUNTROUNDS = 3;
 
 const getQuestion = (nameGame) => {
   let question = '';
@@ -48,8 +46,8 @@ const getResult = (itemName) => {
     const randNum1 = randomInteger(MIN, MAX);
     const randNum2 = randomInteger(MIN, MAX);
     const randomIndex = randomInteger(MIN, COUNTROUNDS - 1);
-    let arrProgression = [];
-    let randIndexProgression = 0;
+    const arrProgression = getArrayProgressive();
+    const randIndexProgression = randomInteger(MIN, arrProgression.length - 1);
     switch (itemName) {
       case 'brainEven':
         rightAnswer += isEvenNumber(randNum1);
@@ -57,15 +55,13 @@ const getResult = (itemName) => {
         break;
       case 'brainCalc':
         rightAnswer += resultCalculate(randNum1, randNum2, randomIndex);
-        mathExpression += getString(randNum1, randNum2, randomIndex);
+        mathExpression += getCalcString(randNum1, randNum2, randomIndex);
         break;
       case 'brainGcd':
         rightAnswer += getGcdNum(randNum1, randNum2);
         mathExpression += getGcdString(randNum1, randNum2);
         break;
       case 'brainProgression':
-        arrProgression = getArray(5, 10);
-        randIndexProgression += randomInteger(MIN, arrProgression.length - 1);
         rightAnswer += getProgressionAnswer(arrProgression, randIndexProgression);
         mathExpression += getStringProgression(arrProgression, randIndexProgression);
         break;

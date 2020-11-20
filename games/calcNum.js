@@ -1,7 +1,7 @@
 export const questionCalc = 'What is the result of the expression?';
 
 const signs = ['+', '-', '*'];
-export const getString = (num1, num2, randomInd) => {
+export const getCalcString = (num1, num2, randomInd) => {
   const sign = signs[randomInd];
   const stringForCalc = `${num1} ${sign} ${num2}`;
   return stringForCalc;
