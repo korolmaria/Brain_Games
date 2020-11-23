@@ -1,6 +1,7 @@
 #!/usr/bin/env node
+import { getResult } from '../src/index.js';
+import {
+  question, countNums, getMathString, getRightAnswer,
+} from '../games/progressionNum.js';
 
-import getResult from '../src/index.js';
-
-const nameGame = 'brainProgression';
-getResult(nameGame);
+getResult(question, countNums, getMathString, getRightAnswer);

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-import getResult from '../src/index.js';
+import { getResult } from '../src/index.js';
+import {
+  question, countNums, getMathString, getRightAnswer,
+} from '../games/gcdNum.js';
 
-const nameGame = 'brainGcd';
-getResult(nameGame);
+getResult(question, countNums, getMathString, getRightAnswer);

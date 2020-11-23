@@ -1,28 +1,18 @@
-import { randomInteger, MIN, MAX } from '../src/cli.js';
+export const question = 'What number is missing in the progression?';
+export const countNums = 5;
 
-export const questionProgression = 'What number is missing in the progression?';
-
-export const getArrayProgressive = () => {
-  const minLength = 5;
-  const maxLength = 10;
-  const lengthArray = randomInteger(minLength, maxLength);
-  const progresNumSum = randomInteger(MIN, MAX);
-  const numStart = randomInteger(MIN, MAX);
-  const arr = [];
-  for (let i = 0; i < lengthArray; i += 1) {
-    arr[i] = (i === 0) ? numStart : arr[i - 1] + progresNumSum;
+export const getMathString = (arr, randomIndex) => {
+  const arrNums = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (i !== randomIndex) {
+      arrNums.push(arr[i]);
+    } else arrNums.push('..');
   }
-  return arr;
-};
-
-export const getStringProgression = (arr, randomIndex) => {
-  // eslint-disable-next-line no-param-reassign
-  arr[randomIndex] = '..';
-  const newString = arr.join(' ');
+  const newString = arrNums.join(' ');
   return newString;
 };
 
-export const getProgressionAnswer = (arr, randomIndex) => {
+export const getRightAnswer = (arr, randomIndex) => {
   const progressionNum = arr[randomIndex];
-  return progressionNum;
+  return String(progressionNum);
 };

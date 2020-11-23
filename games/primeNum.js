@@ -1,7 +1,14 @@
-export const questionPrime = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+export const question = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+export const countNums = 1;
 
-export const isPrimeNum = (num) => {
+export const getMathString = (nums) => {
+  const string = `${nums[0]}`;
+  return string;
+};
+
+export const getRightAnswer = (nums) => {
   const primeArr = [];
+  const num = nums[0];
   let countDivisors = 0;
   for (let i = 1; i <= num; i += 1) {
     primeArr.push(i);

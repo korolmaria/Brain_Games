@@ -1,27 +1,27 @@
-export const questionCalc = 'What is the result of the expression?';
+export const question = 'What is the result of the expression?';
+export const countNums = 2;
 
 const signs = ['+', '-', '*'];
-export const getCalcString = (num1, num2, randomInd) => {
-  const sign = signs[randomInd];
-  const stringForCalc = `${num1} ${sign} ${num2}`;
+export const getMathString = (nums, randInd) => {
+  const stringForCalc = nums.join(` ${signs[randInd]} `);
   return stringForCalc;
 };
 
-export function resultCalculate(num1, num2, randomInd) {
-  const sign = signs[randomInd];
+export function getRightAnswer(nums, randInd) {
+  const sign = signs[randInd];
   let resultCalc = 0;
   switch (sign) {
     case '+':
-      resultCalc = num1 + num2;
+      resultCalc = nums[0] + nums[1];
       break;
     case '-':
-      resultCalc = num1 - num2;
+      resultCalc = nums[0] - nums[1];
       break;
     case '*':
-      resultCalc = num1 * num2;
+      resultCalc = nums[0] * nums[1];
       break;
     default:
       break;
   }
-  return resultCalc;
+  return String(resultCalc);
 }
