@@ -1,12 +1,16 @@
-export const question = 'Find the greatest common divisor of given numbers.';
-export const countNums = 2;
+import getResult from '../src/index.js';
 
-export const getMathString = (arr) => {
+const question = 'Find the greatest common divisor of given numbers.';
+const countNums = 2;
+
+const getMathString = (arr) => {
   const strGcd = arr.join(' ');
   return strGcd;
 };
 
-export const getRightAnswer = (arr) => {
+const getRightAnswer = (arr) => {
+  const strGcd = getMathString(arr);
+  const answerArr = [];
   const num1 = arr[0];
   const num2 = arr[1];
 
@@ -25,5 +29,9 @@ export const getRightAnswer = (arr) => {
       }
     }
   }
-  return String(gcdNum);
+  answerArr.push(strGcd);
+  answerArr.push(String(gcdNum));
+  return answerArr;
 };
+
+getResult(question, countNums, getRightAnswer);

@@ -1,12 +1,16 @@
-export const question = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-export const countNums = 1;
+import getResult from '../src/index.js';
 
-export const getMathString = (nums) => {
+const question = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+const countNums = 1;
+
+const getMathString = (nums) => {
   const string = `${nums[0]}`;
   return string;
 };
 
-export const getRightAnswer = (nums) => {
+const getRightAnswer = (nums) => {
+  const mathString = getMathString(nums);
+  const answerArr = [];
   const primeArr = [];
   const num = nums[0];
   let countDivisors = 0;
@@ -19,5 +23,9 @@ export const getRightAnswer = (nums) => {
     }
   }
   const answer = (countDivisors === 2) ? 'yes' : 'no';
-  return answer;
+  answerArr.push(mathString);
+  answerArr.push(answer);
+  return answerArr;
 };
+
+getResult(question, countNums, getRightAnswer);

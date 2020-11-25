@@ -1,7 +1,7 @@
 import getResult from '../src/index.js';
 
 const question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-const countNum = 1;
+const countNums = 1;
 
 const getRightAnswer = (nums) => {
   const rightAnswer = [];
@@ -12,4 +12,4 @@ const getRightAnswer = (nums) => {
   return rightAnswer;
 };
 
-getResult(question, countNum, getRightAnswer);
+getResult(question, countNums, getRightAnswer);

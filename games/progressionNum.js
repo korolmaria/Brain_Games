@@ -1,7 +1,9 @@
-export const question = 'What number is missing in the progression?';
-export const countNums = 5;
+import getResult from '../src/index.js';
 
-export const getMathString = (arr, randomIndex) => {
+const question = 'What number is missing in the progression?';
+const countNums = 5;
+
+const getMathString = (arr, randomIndex) => {
   const arrNums = [];
   for (let i = 0; i < arr.length; i += 1) {
     if (i !== randomIndex) {
@@ -12,7 +14,13 @@ export const getMathString = (arr, randomIndex) => {
   return newString;
 };
 
-export const getRightAnswer = (arr, randomIndex) => {
+const getRightAnswer = (arr, randomIndex) => {
+  const mathString = getMathString(arr, randomIndex);
+  const answerArr = [];
   const progressionNum = arr[randomIndex];
-  return String(progressionNum);
+  answerArr.push(mathString);
+  answerArr.push(String(progressionNum));
+  return answerArr;
 };
+
+getResult(question, countNums, getRightAnswer);

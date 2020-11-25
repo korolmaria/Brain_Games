@@ -1,3 +1,5 @@
+import getResult from '../src/index.js';
+
 export const question = 'What is the result of the expression?';
 export const countNums = 2;
 
@@ -8,7 +10,9 @@ export const getMathString = (nums, randInd) => {
 };
 
 export function getRightAnswer(nums, randInd) {
+  const mathString = getMathString(nums, randInd);
   const sign = signs[randInd];
+  const resultArr = [];
   let resultCalc = 0;
   switch (sign) {
     case '+':
@@ -23,5 +27,9 @@ export function getRightAnswer(nums, randInd) {
     default:
       break;
   }
-  return String(resultCalc);
+  resultArr.push(mathString);
+  resultArr.push(String(resultCalc));
+  return resultArr;
 }
+
+getResult(question, countNums, getRightAnswer);
