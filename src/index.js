@@ -12,7 +12,7 @@ const getResult = (question, countNums, getRightResult) => {
     const randIndex = getRandIndex(arrNums);
     const rightAnswer = getRightResult(arrNums, randIndex);
     console.log(`Question: ${rightAnswer[0]}`);
-    const answerUser = readlineSync.question('Your answer: ');
+    const answerUser = Number(readlineSync.question('Your answer: '));
     if (answerUser === rightAnswer[1]) {
       console.log('Correct!');
       countRightAnswer += 1;
