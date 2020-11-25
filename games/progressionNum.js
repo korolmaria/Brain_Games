@@ -19,7 +19,7 @@ const getRightAnswer = (arr, randomIndex) => {
   const answerArr = [];
   const progressionNum = arr[randomIndex];
   answerArr.push(mathString);
-  answerArr.push(String(progressionNum));
+  answerArr.push(progressionNum);
   return answerArr;
 };
 
