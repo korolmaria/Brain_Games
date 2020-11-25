@@ -4,7 +4,7 @@
 
 ### Asciinema terminal session:
 #### Brain-even game
-[![asciicast](https://asciinema.org/a/kHmZ02YrSpDsiRh2SWeJkjhuD.svg)](https://asciinema.org/a/kHmZ02YrSpDsiRh2SWeJkjhuD)
+[![asciicast](https://asciinema.org/a/UlONvNcfG1xRFfKmOhOnoADus.svg)](https://asciinema.org/a/UlONvNcfG1xRFfKmOhOnoADus)
 #### Brain-calc game
 [![asciicast](https://asciinema.org/a/FDpFVvO26BVALYnnXorLeeS77.svg)](https://asciinema.org/a/FDpFVvO26BVALYnnXorLeeS77)
 #### Brain-gcd game
