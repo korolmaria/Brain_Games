@@ -28,7 +28,7 @@ export function getRightAnswer(nums, randInd) {
       break;
   }
   resultArr.push(mathString);
-  resultArr.push(resultCalc);
+  resultArr.push(String(resultCalc));
   return resultArr;
 }
 
