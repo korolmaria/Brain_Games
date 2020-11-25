@@ -1,12 +1,15 @@
-export const question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-export const countNums = 1;
+import getResult from '../src/index.js';
 
-export const getRightAnswer = (nums) => {
-  const answer = (nums[0] % 2) === 0 ? 'yes' : 'no';
-  return answer;
-};
+const question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+const countNum = 1;
 
-export const getMathString = (nums) => {
+const getRightAnswer = (nums) => {
+  const rightAnswer = [];
   const string = `${nums[0]}`;
-  return string;
+  rightAnswer.push(string);
+  const answer = (nums[0] % 2) === 0 ? 'yes' : 'no';
+  rightAnswer.push(answer);
+  return rightAnswer;
 };
+
+getResult(question, countNum, getRightAnswer);
