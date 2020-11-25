@@ -1,8 +1,6 @@
 export const COUNTROUNDS = 3;
-export const MIN = 0;
-export const MAX = 30;
 
-export const generateRandNum = (minNum = MIN, maxNum = MAX) => {
+export const generateRandNum = (minNum = 0, maxNum = 30) => {
   const rand = minNum + Math.random() * (maxNum + 1 - minNum);
   return Math.floor(rand);
 };
@@ -20,8 +18,8 @@ export const getArrNums = (numbersCount) => {
     const minLength = 5;
     const maxLength = 10;
     const lengthArray = generateRandNum(minLength, maxLength);
-    const progresNumSum = generateRandNum(MIN, MAX);
-    const numStart = generateRandNum(MIN, MAX);
+    const progresNumSum = generateRandNum();
+    const numStart = generateRandNum();
     for (let i = 0; i < lengthArray; i += 1) {
       arr[i] = (i === 0) ? numStart : arr[i - 1] + progresNumSum;
     }
