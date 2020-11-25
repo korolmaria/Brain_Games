@@ -1,16 +1,14 @@
 import readlineSync from 'readline-sync';
-import { COUNTROUNDS, getRandIndex, getArray } from './funcs.js';
+import { COUNTROUNDS } from './funcs.js';
 
-const getResult = (question, countNums, getRightResult) => {
+const getResult = (question, generateResult) => {
   console.log('Welcome to the Brain Games!');
   const nameUser = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${nameUser}`);
   console.log(question);
   let countRightAnswer = 0;
   for (let i = 0; i < COUNTROUNDS; i += 1) {
-    const arrNums = getArray(countNums);
-    const randIndex = getRandIndex(arrNums);
-    const rightAnswer = getRightResult(arrNums, randIndex);
+    const rightAnswer = generateResult();
     console.log(`Question: ${rightAnswer[0]}`);
     const answerUser = readlineSync.question('Your answer: ');
     if (answerUser === rightAnswer[1]) {

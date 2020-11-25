@@ -1,15 +1,17 @@
 import getResult from '../src/index.js';
+import { getArrNums } from '../src/funcs.js';
 
 const question = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-const countNums = 1;
+const numbersCount = 1;
 
-const getMathString = (nums) => {
+const generateString = (nums) => {
   const string = `${nums[0]}`;
   return string;
 };
 
-const getRightAnswer = (nums) => {
-  const mathString = getMathString(nums);
+const generateResult = () => {
+  const nums = getArrNums(numbersCount);
+  const mathString = generateString(nums);
   const answerArr = [];
   const primeArr = [];
   const num = nums[0];
@@ -28,4 +30,4 @@ const getRightAnswer = (nums) => {
   return answerArr;
 };
 
-getResult(question, countNums, getRightAnswer);
+getResult(question, generateResult);

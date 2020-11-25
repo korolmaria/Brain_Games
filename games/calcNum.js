@@ -1,16 +1,20 @@
 import getResult from '../src/index.js';
+import { getArrNums, getRandIndex } from '../src/funcs.js';
 
-export const question = 'What is the result of the expression?';
-export const countNums = 2;
+const question = 'What is the result of the expression?';
+const numbersCount = 2;
 
 const signs = ['+', '-', '*'];
-export const getMathString = (nums, randInd) => {
+
+const generateString = (nums, randInd) => {
   const stringForCalc = nums.join(` ${signs[randInd]} `);
   return stringForCalc;
 };
 
-export function getRightAnswer(nums, randInd) {
-  const mathString = getMathString(nums, randInd);
+function generateResult() {
+  const nums = getArrNums(numbersCount);
+  const randInd = getRandIndex(nums);
+  const mathString = generateString(nums, randInd);
   const sign = signs[randInd];
   const resultArr = [];
   let resultCalc = 0;
@@ -32,4 +36,4 @@ export function getRightAnswer(nums, randInd) {
   return resultArr;
 }
 
-getResult(question, countNums, getRightAnswer);
+getResult(question, generateResult);

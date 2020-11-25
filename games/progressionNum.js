@@ -1,26 +1,29 @@
 import getResult from '../src/index.js';
+import { getArrNums, getRandIndex } from '../src/funcs.js';
 
 const question = 'What number is missing in the progression?';
-const countNums = 5;
+const numbersCount = 5;
 
-const getMathString = (arr, randomIndex) => {
+const generateString = (nums, randomIndex) => {
   const arrNums = [];
-  for (let i = 0; i < arr.length; i += 1) {
+  for (let i = 0; i < nums.length; i += 1) {
     if (i !== randomIndex) {
-      arrNums.push(arr[i]);
+      arrNums.push(nums[i]);
     } else arrNums.push('..');
   }
   const newString = arrNums.join(' ');
   return newString;
 };
 
-const getRightAnswer = (arr, randomIndex) => {
-  const mathString = getMathString(arr, randomIndex);
+const generateResult = () => {
+  const nums = getArrNums(numbersCount);
+  const randomIndex = getRandIndex(nums);
+  const mathString = generateString(nums, randomIndex);
   const answerArr = [];
-  const progressionNum = arr[randomIndex];
+  const progressionNum = nums[randomIndex];
   answerArr.push(mathString);
   answerArr.push(String(progressionNum));
   return answerArr;
 };
 
-getResult(question, countNums, getRightAnswer);
+getResult(question, generateResult);

@@ -1,10 +1,12 @@
 import getResult from '../src/index.js';
+import { getArrNums } from '../src/funcs.js';
 
 const question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-const countNums = 1;
+const numbersCount = 1;
 
-const getRightAnswer = (nums) => {
+const generateResult = () => {
   const rightAnswer = [];
+  const nums = getArrNums(numbersCount);
   const string = `${nums[0]}`;
   rightAnswer.push(string);
   const answer = (nums[0] % 2) === 0 ? 'yes' : 'no';
@@ -12,4 +14,4 @@ const getRightAnswer = (nums) => {
   return rightAnswer;
 };
 
-getResult(question, countNums, getRightAnswer);
+getResult(question, generateResult);
