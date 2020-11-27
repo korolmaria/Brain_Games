@@ -15,14 +15,16 @@ const isPrime = (number) => {
       countDivisors += 1;
     }
   }
-  const answer = (countDivisors === 2) ? 'yes' : 'no';
-  return answer;
+  if (countDivisors === 2) {
+    return true;
+  }
+  return false;
 };
 
 const generateResult = () => {
   const randNumber = generateRandom();
   const question = String(randNumber);
-  const rightAnswer = isPrime(randNumber);
+  const rightAnswer = isPrime(randNumber) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 

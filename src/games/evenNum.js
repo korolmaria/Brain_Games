@@ -4,14 +4,16 @@ import generateRandom from '../funcs.js';
 const questionOfGame = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
 const isEven = (number) => {
-  const answer = (number % 2) === 0 ? 'yes' : 'no';
-  return answer;
+  if (number % 2 === 0) {
+    return true;
+  }
+  return false;
 };
 
 const generateResult = () => {
   const randNumber = generateRandom();
   const question = String(randNumber);
-  const rightAnswer = isEven(randNumber);
+  const rightAnswer = isEven(randNumber) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 
