@@ -4,21 +4,16 @@ import generateRandom from '../funcs.js';
 const questionOfGame = 'What is the result of the expression?';
 
 export const calculate = (num1, num2, sign) => {
-  let answer = 0;
   switch (sign) {
     case '+':
-      answer = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      answer = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      answer = num1 * num2;
-      break;
+      return num1 * num2;
     default:
-      break;
+      return false;
   }
-  return answer;
 };
 
 function generateResult() {
