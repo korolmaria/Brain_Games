@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-import '../games/gcdNum.js';
+import generateResultGame from '../src/games/gcdNum.js';
+
+generateResultGame();

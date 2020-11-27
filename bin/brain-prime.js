@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-import '../games/primeNum.js';
+import generateResultGame from '../src/games/primeNum.js';
+
+generateResultGame();

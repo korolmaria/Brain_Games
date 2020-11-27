@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-import '../games/calcNum.js';
+import generateResultGame from '../src/games/calcNum.js';
+
+generateResultGame();
