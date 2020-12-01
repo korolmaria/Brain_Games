@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import generateResultGame from '../src/games/progressionNum.js';
+import generateResultGame from '../src/games/progression.js';
 
 generateResultGame();

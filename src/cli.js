@@ -1,8 +1,9 @@
-/* eslint-disable default-case */
-import promptly from 'promptly';
+import readlineSync from 'readline-sync';
 
-const askNameUser = async () => {
-  const nameUser = await promptly.prompt('May I have your name? ');
-  console.log(`Hello, ${nameUser}!`);
+const askNameUser = () => {
+  console.log('Welcome to the Brain Games!');
+  const nameUser = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${nameUser}`);
 };
+
 export default askNameUser;

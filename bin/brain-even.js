@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import generateResultGame from '../src/games/evenNum.js';
+import generateResultGame from '../src/games/even.js';
 
 generateResultGame();

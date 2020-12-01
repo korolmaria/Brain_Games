@@ -1,5 +1,5 @@
 import getResult from '../index.js';
-import generateRandom from '../funcs.js';
+import generateRandom from '../random.js';
 
 const questionOfGame = 'Find the greatest common divisor of given numbers.';
 
@@ -22,14 +22,13 @@ const getGcd = (num1, num2) => {
   return answer;
 };
 
-const generateResult = () => {
+const generateData = () => {
   const randNum1 = generateRandom();
   const randNum2 = generateRandom();
-  const numbers = [randNum1, randNum2];
-  const question = numbers.join(' ');
+  const question = `${randNum1} ${randNum2}`;
   const rightAnswer = getGcd(randNum1, randNum2);
   return [question, String(rightAnswer)];
 };
 
-const generateResultGame = () => getResult(questionOfGame, generateResult);
+const generateResultGame = () => getResult(questionOfGame, generateData);
 export default generateResultGame;

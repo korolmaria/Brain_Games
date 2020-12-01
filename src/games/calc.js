@@ -1,9 +1,9 @@
 import getResult from '../index.js';
-import generateRandom from '../funcs.js';
+import generateRandom from '../random.js';
 
 const questionOfGame = 'What is the result of the expression?';
 
-export const calculate = (num1, num2, sign) => {
+const calculate = (num1, num2, sign) => {
   switch (sign) {
     case '+':
       return num1 + num2;
@@ -16,17 +16,16 @@ export const calculate = (num1, num2, sign) => {
   }
 };
 
-function generateResult() {
+function generateData() {
   const signs = ['+', '-', '*'];
   const randIndex = generateRandom(0, signs.length - 1);
   const randNum1 = generateRandom();
   const randNum2 = generateRandom();
-  const numbers = [randNum1, randNum2];
   const sign = signs[randIndex];
-  const question = numbers.join(` ${sign} `);
+  const question = `${randNum1} ${sign} ${randNum2}`;
   const rightAnswer = calculate(randNum1, randNum2, sign);
   return [question, String(rightAnswer)];
 }
 
-const generateResultGame = () => getResult(questionOfGame, generateResult);
+const generateResultGame = () => getResult(questionOfGame, generateData);
 export default generateResultGame;

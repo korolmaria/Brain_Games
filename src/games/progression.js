@@ -1,9 +1,9 @@
 import getResult from '../index.js';
-import generateRandom from '../funcs.js';
+import generateRandom from '../random.js';
 
 const questionOfGame = 'What number is missing in the progression?';
 
-const generateRow = (minLength, maxLength) => {
+const generateProgression = (minLength, maxLength) => {
   const numbers = [];
   const lengthArray = generateRandom(minLength, maxLength);
   const progresNumSum = generateRandom();
@@ -24,15 +24,15 @@ const generateQuestion = (numbers, randomIndex) => {
   return itemsForQuestion.join(' ');
 };
 
-const generateResult = () => {
+const generateData = () => {
   const minLength = 5;
   const maxLength = 10;
-  const numbers = generateRow(minLength, maxLength);
+  const numbers = generateProgression(minLength, maxLength);
   const randIndex = generateRandom(0, numbers.length);
   const question = generateQuestion(numbers, randIndex);
   const rightAnswer = numbers[randIndex];
   return [question, String(rightAnswer)];
 };
 
-const generateResultGame = () => getResult(questionOfGame, generateResult);
+const generateResultGame = () => getResult(questionOfGame, generateData);
 export default generateResultGame;
